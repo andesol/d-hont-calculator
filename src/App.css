@@ -1,38 +1,97 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.divisions {
+    width: 4.3rem;
+}
+
+.input-section {
+    padding: 2rem 0.75rem;
+}
+
+.seats-input {
+    width: 8.5rem;
+    margin-right: 2rem;
+}
+
+.plot-section {
+    padding: 2rem;
+}
+
+.btn {
+    /* Display */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* Visual */
+    background-color: var(--main-clr);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(82, 31, 31, 0.18);
+    opacity: 0.85;
+    /* Size */
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    /* Text */
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.1;
+
+    /* Border for Windows hight contrast mode users */
+    @media screen and (-ms-high-contrast: active) {
+        border: 2px solid currentcolor;
+    }
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    transition: 220ms all ease-in-out;
+}
+
+.btn:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px var(--outline-blue);
+}
+
+.btn:active {
+    opacity: 1;
 }
